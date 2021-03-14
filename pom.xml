@@ -82,7 +82,6 @@
             <artifactId>lombok</artifactId>
             <version>${org.projectlombok.version}</version>
             <optional>true</optional>
-            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
