@@ -1,0 +1,21 @@
+configuration:
+  status: warn
+
+  appenders:
+    Console:
+      name: console-log
+      PatternLayout:
+        Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+
+  loggers:
+    logger:
+      - name: lk.chathurabuddi
+        level: debug
+        additivity: false
+        appender-ref:
+          - ref: console-log
+
+    root:
+      level: error
+      appender-ref:
+        ref: console-log

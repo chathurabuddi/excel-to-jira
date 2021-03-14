@@ -1,0 +1,38 @@
+excel:
+  # last row number of the excel sheet.
+  limitRows: 8
+  # absolute file path to the excel sheet
+  path: "C:\\Test case.xlsx"
+  # skip the rows from the top while reading. This could be useful when header rows are there.
+  skipRows: 2
+
+jira:
+  # url of JIRA server
+  url: http://192.168.99.100:8080
+  # username of JIRA server
+  username: chathurabuddi
+  # password of JIRA server
+  password: chathurabuddi@123
+
+# the JIRA field-name to cell-id mapping. cell-id is 0 based.
+# writable cells should not be empty. Fill with dummy data. Eg: id cell.
+fieldMapping:
+  # this is a writable field. the JIRA ticket id will be updated in this field as a hyper-link
+  id: 0
+  # summary/title of the JIRA ticket
+  summary: 1
+  # description/body of the JIRA ticket
+  description: 2
+  # name of the issue type. make sure the specified types are available in the JIRA project.
+  # same exact name is required. Eg: Bug, Task...etc.
+  issuetype: 3
+  # key of the JIRA project where tickets needs to be created. make sure the specified project keys
+  # are available in the JIRA server. Eg: AWEB, INTGW...etc.
+  project: 4
+  # name of the priority. make sure the specified priorities are available under the JIRA project.
+  # Eg: Minor, Medium...etc.
+  priority: 5
+  # comma separated list of labels.
+  labels: 6
+  # name of the assignee. make sure the specified assignee names are available with same exact name.
+  assignee: 7

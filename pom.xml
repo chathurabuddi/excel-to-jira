@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>lk.chathurabuddi</groupId>
+    <artifactId>excel-to-jira</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <com.fasterxml.jackson.version>2.9.9</com.fasterxml.jackson.version>
+        <com.squareup.okhttp3.version>3.14.9</com.squareup.okhttp3.version>
+        <org.apache.logging.log4j.version>2.13.3</org.apache.logging.log4j.version>
+        <org.apache.poi.version>4.0.1</org.apache.poi.version>
+        <org.projectlombok.version>1.18.16</org.projectlombok.version>
+        <org.yaml.snakeyaml.version>1.27</org.yaml.snakeyaml.version>
+    </properties>
+
+    <dependencies>
+        <!-- reading/writing excel files -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${org.apache.poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${org.apache.poi.version}</version>
+        </dependency>
+
+        <!-- logging -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${org.apache.logging.log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${org.apache.logging.log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${org.apache.logging.log4j.version}</version>
+        </dependency>
+
+        <!-- json conversions -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <version>${com.fasterxml.jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${com.fasterxml.jackson.version}</version>
+        </dependency>
+
+        <!-- yaml file reading -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${org.yaml.snakeyaml.version}</version>
+        </dependency>
+
+        <!-- make HTTP calls -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${com.squareup.okhttp3.version}</version>
+        </dependency>
+
+        <!-- reduce boilerplate code -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${org.projectlombok.version}</version>
+            <optional>true</optional>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
+</project>
